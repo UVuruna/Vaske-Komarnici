@@ -1,4 +1,12 @@
-import { BODY, LOGO, DROPARROW, MENU, ThemeList, ThemeColors, BUTTONS } from './globals.js'
+import {
+    BODY,
+    LOGO,
+    DROPARROW,
+    MENU,
+    ThemeList,
+    ThemeColors,
+    BUTTONS
+} from './globals.js'
 
 // Logo dugme koje menja temu (SWAP PRESETS)
 function themeSwapper() {
@@ -35,18 +43,25 @@ function settingDayTheme() {
 
 // Postavljanje teme na osnovu dobijenog argumenta (SETTER)
 function settingTheme(Time, Hovered = null) {
+    console.log('radi')
     // Uzimanje boja iz objekta ThemeColors preko trenutne teme iz LocalStorage
     let currentTheme = localStorage.getItem('theme')
     let PresetColors = ThemeColors[currentTheme]
     let logoType
+    const dropdownMenus = document.querySelectorAll('.dropdownMenu')
 
     // Postavljanje boja na osnovu trenutne teme (SETTER)
     BODY.style.backgroundColor = PresetColors.primary
     BODY.style.color = PresetColors.text
     DROPARROW.src = PresetColors.dropdownArrow
     BUTTONS.forEach(link => {
-        link.style.backgroundColor = PresetColors.buttons
+        link.style.backgroundColor = PresetColors.secondary
         link.style.color = PresetColors.text
+    })
+
+    styleToDropdown(dropdownMenus, PresetColors.primary, PresetColors.secondary)
+    window.addEventListener('resize', () => {
+        styleToDropdown(dropdownMenus, PresetColors.primary, PresetColors.secondary)
     })
 
     // Promena LOGO-a na osnovu trenutnog vremena i hover stanja
@@ -72,6 +87,42 @@ function settingTheme(Time, Hovered = null) {
     // Postavljanje LOGO-a (SETTER)
     LOGO.src = `Images/Logo/logo_${currentTheme}_${logoType}.webp`
     MENU.src = `Images/Other/dropdown-menu-${currentTheme}.svg`
+}
+
+// Postavlja bordere na padajuce menije
+function styleToDropdown(dropdownMenus, primaryColor, secondaryColor) {
+    dropdownMenus.forEach(menu => {
+        if (
+            !menu.classList.contains('false') ||
+            window.matchMedia('(max-width: 550px)').matches
+        ) {
+            menu.style.border = `3px solid ${secondaryColor}`
+            menu.style.backgroundColor = primaryColor
+
+            const menuElements = Array.from(menu.children)
+            menuElements.forEach(element => {
+                dropdownEleHoverColor(element, secondaryColor)
+            })
+        } else {
+            menu.style.border = `none`
+            menu.style.backgroundColor = ''
+
+            const menuElements = Array.from(menu.children)
+            menuElements.forEach(element => {
+                dropdownEleHoverColor(element, '')
+            })
+        }
+    })
+}
+
+// Postavlja color na elemente padajuceg menija
+function dropdownEleHoverColor(element, color) {
+    element.addEventListener('mouseover', () => {
+        element.style.backgroundColor = color
+    })
+    element.addEventListener('mouseout', () => {
+        element.style.backgroundColor = '' // Vraćanje originalne pozadine
+    })
 }
 
 window.onload = function () {

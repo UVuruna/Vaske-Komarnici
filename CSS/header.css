@@ -48,7 +48,7 @@
   width: 60px;
 }
 
-.pages_spans {
+.pages_frame > .dropdownMenu {
   gap: inherit;
   display: inherit;
   flex-direction: inherit;
@@ -56,7 +56,7 @@
   justify-content: inherit;
 }
 
-.pages_spans > img {
+.pages_frame > .dropdownMenu > img {
   width: 100%;
   height: 100%;
 }
@@ -69,66 +69,135 @@
   transition: all 0.3s ease-in-out;
 }
 
+/* Dropdown */
 
-  /* Dropdown */
-
-.dropdown #dropdown-arrow {
+.dropdownTrigger #dropdown-arrow {
   height: 0.6em;
 }
 
-.dropdown-content {
+.dropdownTrigger > .dropdownMenu {
   display: none;
   position: absolute;
-  background: #bababa;
-  min-width: 240px;
-  box-shadow: 0 0.5em 2em 0 rgba(255, 255, 255, 0.666);
+  background: rgb(60, 60, 60);
+  width: 240px;
   white-space: nowrap;
+  border-radius: 1em;
+  box-shadow: 0.75em 0.5em 5px rgba(80, 80, 80, 0.8);
 }
 
-
-
-.dropdown-content a {
-  color: rgb(35, 35, 35);
-  padding: 1em 2em;
+.dropdownTrigger > .dropdownMenu a {
+  padding: 0.5em 1em;
   display: block;
+  border-radius: 1em;
 }
 
-.dropdown-content a:hover {
-  background: #a3eeff;
-}
-
-.dropdown:hover .dropdown-content {
+.dropdownTrigger:hover > .dropdownMenu {
   display: block;
 }
 
 /* --- TABLET Devices --- */
-@media (min-width: 921px) and (max-width: 1440px) {
-
+@media (min-width: 1081px) and (max-width: 1440px) {
   /* Frames */
+  .header {
+    padding: 20px;
+  }
+
   .logo-frame {
+    max-width: 100px;
     width: 15%;
     margin-right: 3%;
   }
+
   .pages_frame {
     padding-right: 0;
-    gap: 30px;
+    gap: 35px;
+  }
+
+  .dropdownTrigger > .dropdownMenu {
+    width: 200px;
+  }
+}
+
+@media (min-width: 721px) and (max-width: 1080px) {
+  /* Frames */
+  .header {
+    padding: 20px;
+  }
+
+  .logo-frame {
+    max-width: 80px;
+    width: 15%;
+  }
+
+  .pages_frame {
+    padding-right: 0;
+    gap: 20px;
+  }
+
+  .dropdownTrigger > .dropdownMenu {
+    width: 160px;
+  }
+}
+
+@media (min-width: 551px) and (max-width: 720px) {
+  /* Frames */
+  .header {
+    padding: 15px;
+  }
+
+  .logo-frame {
+    max-width: 60px;
+    width: 15%;
+  }
+
+  .pages_frame {
+    padding-right: 0;
+    gap: 12px;
+  }
+
+  .dropdownTrigger > .dropdownMenu {
+    width: 130px;
   }
 }
 
 /* --- MOBILE Devices --- */
-@media (max-width: 920px) {
-
-  /* Logo */
+@media (max-width: 550px) {
   .header {
     flex-direction: row-reverse;
     padding: 20px;
   }
 
-.logo-frame {
-  max-width: 100px;
-  margin-right: 0;
-}
+  /* -- Logo -- */
 
+  .logo-frame {
+    margin-right: 0;
+    padding: 2%;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .logo-frame:hover {
+    padding: 2%;
+    padding: 0;
+    transition: all 0.6s ease-in-out;
+  }
+
+  /* -- DROPDOWN Primary -- */
+
+  #menu-icon {
+    cursor: pointer;
+    display: flex;
+    width: 20%;
+    padding: 2%;
+    transition: all 0.3s ease-in-out;
+  }
+
+  #menu-icon:hover {
+    cursor: pointer;
+    display: flex;
+    padding: 0;
+    transition: all 0.6s ease-in-out;
+    opacity: 0.6;
+  }
 
   .pages_frame {
     gap: 0;
@@ -136,22 +205,53 @@
     justify-content: left;
   }
 
-  .pages_spans {
-    gap: 0;
-    font-size: 14px;
+  .pages_frame > .dropdownMenu {
     display: none;
-    flex-direction: column;
+    position: absolute;
+    top: 84px;
+    background: rgb(60, 60, 60);
+    box-shadow: 0.75em 0.5em 5px rgba(80, 80, 80, 0.8);
+    z-index: 5;
+    border-radius: 2em;
+    flex-grow: 1;
   }
+
+  .pages_frame > .dropdownMenu > * {
+    padding: 1em 2em;
+    border-radius: 1em;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .dropdownTrigger {
+    display: block;
+  }
+
+  .pages_frame > .dropdownMenu > a {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .pages_frame > .dropdownMenu.show {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* -- DROPDOWN Secondary -- */
+
+  .dropdownTrigger > .dropdownMenu {
+    width: 130px;
+    box-shadow: 0.75em 0.5em 5px rgba(80, 80, 80, 0.8);
+  }
+
+  /* Center Button */
 
   .pages_frame button {
     margin: auto;
     padding: 0.75em 1.5em;
   }
-
-  /* Dropdown */
-
-  #menu-icon {
-    width: 100px;
-  }
-
 }

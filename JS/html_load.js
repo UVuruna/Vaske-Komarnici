@@ -9,4 +9,4 @@ function loadHTML (elementId, filePath) {
 }
 
 loadHTML('header', '../HTML/header.html')
-loadHTML('contact_us', '../HTML/contact_us.html')
+//loadHTML('contact_us', '../HTML/contact_us.html')
