@@ -1,0 +1,157 @@
+/* --- PC Devices --- */
+
+/* Main (Parent) Frame */
+
+.header {
+  width: 100%;
+  padding: 30px;
+  display: flex;
+  flex-direction: row;
+  white-space: nowrap;
+}
+
+/* Logo */
+
+.logo-frame {
+  width: 20%;
+  height: auto;
+  max-width: 200px;
+  margin-right: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-frame #logo {
+  z-index: 10;
+  width: 100%;
+}
+
+/* Pages Span Section */
+#menu-icon {
+  display: none;
+}
+
+.pages_frame {
+  width: 100%;
+  padding-right: 5%;
+  display: flex;
+  flex-direction: row;
+  gap: 60px;
+  align-items: center;
+  justify-content: flex-end;
+  z-index: 2;
+  flex-grow: 1;
+}
+
+#menu-icon {
+  width: 60px;
+}
+
+.pages_spans {
+  gap: inherit;
+  display: inherit;
+  flex-direction: inherit;
+  align-items: inherit;
+  justify-content: inherit;
+}
+
+.pages_spans > img {
+  width: 100%;
+  height: 100%;
+}
+
+.header span {
+  cursor: pointer;
+}
+
+.pages_frame span {
+  transition: all 0.3s ease-in-out;
+}
+
+
+  /* Dropdown */
+
+.dropdown #dropdown-arrow {
+  height: 0.6em;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background: #bababa;
+  min-width: 240px;
+  box-shadow: 0 0.5em 2em 0 rgba(255, 255, 255, 0.666);
+  white-space: nowrap;
+}
+
+
+
+.dropdown-content a {
+  color: rgb(35, 35, 35);
+  padding: 1em 2em;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background: #a3eeff;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* --- TABLET Devices --- */
+@media (min-width: 921px) and (max-width: 1440px) {
+
+  /* Frames */
+  .logo-frame {
+    width: 15%;
+    margin-right: 3%;
+  }
+  .pages_frame {
+    padding-right: 0;
+    gap: 30px;
+  }
+}
+
+/* --- MOBILE Devices --- */
+@media (max-width: 920px) {
+
+  /* Logo */
+  .header {
+    flex-direction: row-reverse;
+    padding: 20px;
+  }
+
+.logo-frame {
+  max-width: 100px;
+  margin-right: 0;
+}
+
+
+  .pages_frame {
+    gap: 0;
+    padding-right: 0;
+    justify-content: left;
+  }
+
+  .pages_spans {
+    gap: 0;
+    font-size: 14px;
+    display: none;
+    flex-direction: column;
+  }
+
+  .pages_frame button {
+    margin: auto;
+    padding: 0.75em 1.5em;
+  }
+
+  /* Dropdown */
+
+  #menu-icon {
+    width: 100px;
+  }
+
+}

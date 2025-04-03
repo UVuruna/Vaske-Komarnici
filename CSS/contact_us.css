@@ -1,0 +1,108 @@
+/* --- ALL Devices --- */
+
+/* Frames */
+
+.contact_us {
+  width: 100%;
+  background-color: #181818;
+  display: flex;
+  flex-direction: row;
+  padding: 40px 80px;
+}
+
+.contact_us .text {
+  width: 50%;
+  display: block;
+}
+
+.contact_us form {
+  width: 50%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact_us .logo {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+/* Text */
+
+.contact_us h1 {
+  color: #ffffff;
+}
+
+.contact_us p {
+  padding: 30px 0;
+  color: #ffffff;
+  text-align: justify;
+  max-width: 550px;
+}
+
+.contact_us h3 {
+  padding: 20px 0;
+  color: #ffffff;
+}
+
+/* Images */
+
+.contact_us .logo img {
+  height: 36px;
+  object-fit: cover;
+}
+
+/* --- TABLET Devices --- */
+
+@media (min-width: 768px) and (max-width: 1300px) {
+  /* Frames */
+  .contact_us {
+    padding: 20px 40px;
+  }
+
+  /* Text */
+
+  .contact_us h1 {
+    font-size: 30px;
+  }
+
+  .contact_us p {
+    font-size: 13px;
+  }
+
+  .contact_us h3 {
+    font-size: 20px;
+  }
+}
+
+/* --- MOBILE Devices --- */
+
+@media (max-width: 768px) {
+  /* Frames */
+  .contact_us {
+    padding: 10px 20px;
+    flex-direction: column;
+  }
+
+  .contact_us form,
+  .contact_us .text {
+    width: 100%;
+  }
+
+  /* Text */
+
+  .contact_us h1 {
+    font-size: 30px;
+  }
+
+  .contact_us p {
+    font-size: 13px;
+  }
+
+  .contact_us h3 {
+    font-size: 20px;
+  }
+}
