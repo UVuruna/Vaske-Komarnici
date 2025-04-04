@@ -22,7 +22,6 @@ export const ThemeColors = {
         primary: 'rgb(90, 170, 255)',
         secondary: 'rgb(0, 160, 0)',
         tertiary: 'rgb(130, 255, 130)',
-        buttons: 'rgb(0, 160, 0)',
         dropdownArrow: 'Images/Other/dropdown-arrow-black.svg'
     },
     afternoon: {
@@ -30,7 +29,6 @@ export const ThemeColors = {
         primary: 'rgb(255, 190, 130)',
         secondary: 'rgb(200, 0, 0)',
         tertiary: 'rgb(255, 255, 120)',
-        buttons: 'rgb(200, 0, 0)',
         dropdownArrow: 'Images/Other/dropdown-arrow-black.svg'
     },
     night: {
@@ -38,7 +36,6 @@ export const ThemeColors = {
         primary: 'rgb(35, 35, 35)',
         secondary: 'rgb(100, 0, 200)',
         tertiary: 'rgb(29, 0, 60)',
-        buttons: 'rgb(100, 0, 200)',
         dropdownArrow: 'Images/Other/dropdown-arrow-white.svg'
     }
 }

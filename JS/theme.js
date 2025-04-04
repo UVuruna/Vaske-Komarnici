@@ -94,7 +94,7 @@ function styleToDropdown(dropdownMenus, primaryColor, secondaryColor) {
     dropdownMenus.forEach(menu => {
         if (
             !menu.classList.contains('false') ||
-            window.matchMedia('(max-width: 550px)').matches
+            window.matchMedia('(max-width: 720px)').matches
         ) {
             menu.style.border = `3px solid ${secondaryColor}`
             menu.style.backgroundColor = primaryColor
