@@ -1,59 +1,52 @@
 /* --- --- DEFAULT --- --- */
 
 @font-face {
-  font-family: 'Poppins';
-  src: url(../Fonts/Poppins-Regular.ttf) format('truetype');
-  font-weight: 400;
-  font-style: normal;
+    font-family: 'Poppins';
+    src: url(../Fonts/Poppins-Regular.ttf) format('truetype');
+    font-weight: 400;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: 'Poppins';
-  src: url(../Fonts/Poppins-Medium.ttf) format('truetype');
-  font-weight: 500;
-  font-style: normal;
+    font-family: 'Poppins';
+    src: url(../Fonts/Poppins-Medium.ttf) format('truetype');
+    font-weight: 500;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: 'Poppins';
-  src: url(../Fonts/Poppins-SemiBold.ttf) format('truetype');
-  font-weight: 600;
-  font-style: normal;
+    font-family: 'Poppins';
+    src: url(../Fonts/Poppins-SemiBold.ttf) format('truetype');
+    font-weight: 600;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: 'Poppins';
-  src: url(../Fonts/Poppins-Bold.ttf) format('truetype');
-  font-weight: 700;
-  font-style: normal;
+    font-family: 'Poppins';
+    src: url(../Fonts/Poppins-Bold.ttf) format('truetype');
+    font-weight: 700;
+    font-style: normal;
 }
 
 html {
-  font-size: 16px;
-  font-weight: 400;
+    font-size: 16px;
+    font-weight: 400;
 }
 
 menu,
 ol,
 ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
-#header,
-#top,
-#about_us,
-#out_approach,
-#ai_chat,
-#scaling_business,
-#business_partners,
-#our_services,
-#our_verticles,
-#contact_us,
-#end {
-  display: flex;
-  justify-content: center;
+img,
+span,
+button,
+input,
+select {
+    -webkit-tap-highlight-color: transparent;
 }
 
 a,
@@ -66,151 +59,155 @@ h3,
 h4,
 h5,
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  border: none;
-  text-decoration: none;
-  background: none;
-  -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: none;
+    text-decoration: none;
+    background: none;
+    -webkit-font-smoothing: antialiased;
 }
 
 /* --- --- MAIN Elements --- --- */
 
 h1,
 h2 {
-  font-weight: 600;
+    font-weight: 600;
 }
 
 span {
-  font-weight: 500;
+    font-weight: 500;
 }
 
 button {
-  font-family: 'Poppins';
-  padding: 0.5em 1.5em;
-  text-align: center;
-  border-radius: 1.3em;
-  cursor: pointer;
-  -webkit-tap-highlight-color: transparent;
+    font-family: 'Poppins';
+    padding: 0.5em 1.5em;
+    text-align: center;
+    border-radius: 1.3em;
+    cursor: pointer;
 }
 
-button:hover {
-  transition: all 0.6s ease-in-out;
-  opacity: 0.6;
+button:hover,
+button:active {
+    transition: all 0.4s ease-in-out;
+    opacity: 0.6;
 }
 
 a {
-  color: inherit;
+    color: inherit;
 }
 
 body {
-  font-size: 16px;
-  font-weight: 400;
-  box-sizing: border-box;
-  margin: 0 auto;
-  display: block;
-  font-family: 'Poppins';
+    font-size: 16px;
+    font-weight: 400;
+    box-sizing: border-box;
+    margin: 0 auto;
+    display: block;
+    font-family: 'Poppins';
 }
 
 button {
-  font-size: 16px;
+    font-size: 16px;
 }
 
 h1 {
-  font-size: 50px;
+    font-size: 50px;
 }
 
 h2 {
-  font-size: 35px;
+    font-size: 35px;
 }
 
 button,
 span {
-  font-size: 24px;
+    font-size: 24px;
 }
 
-span:hover {
-  font-size: 28px;
-  font-weight: 700;
+span:hover,
+span:active {
+    font-size: 28px;
+    font-weight: 700;
 }
 
 @media (min-width: 1080.1px) and (max-width: 1440px) {
 
-  body,
-  button {
-    font-size: 15px;
-  }
+    body,
+    button {
+        font-size: 15px;
+    }
 
-  h1 {
-    font-size: 40px;
-  }
+    h1 {
+        font-size: 40px;
+    }
 
-  h2 {
-    font-size: 28px;
-  }
+    h2 {
+        font-size: 28px;
+    }
 
-  button,
-  span {
-    font-size: 20px;
-  }
+    button,
+    span {
+        font-size: 20px;
+    }
 
-  span:hover {
-    font-size: 24px;
-    font-weight: 600;
-  }
+    span:hover,
+    span:active {
+        font-size: 24px;
+        font-weight: 600;
+    }
 }
 
 @media (min-width: 720.1px) and (max-width: 1080px) {
 
-  body,
-  button {
-    font-size: 12px;
-  }
+    body,
+    button {
+        font-size: 12px;
+    }
 
-  h1 {
-    font-size: 33px;
-  }
+    h1 {
+        font-size: 33px;
+    }
 
-  h2 {
-    font-size: 24px;
-  }
+    h2 {
+        font-size: 24px;
+    }
 
-  button,
-  span {
-    font-size: 15px;
-  }
+    button,
+    span {
+        font-size: 15px;
+    }
 
-  span:hover {
-    font-size: 18px;
-    font-weight: 600;
-  }
+    span:hover,
+    span:active {
+        font-size: 18px;
+        font-weight: 600;
+    }
 }
 
 @media (max-width: 720px) {
 
-  body,
-  button {
-    font-size: 11px;
-  }
+    body,
+    button {
+        font-size: 11px;
+    }
 
-  h1 {
-    font-size: 30px;
-  }
+    h1 {
+        font-size: 30px;
+    }
 
-  h2 {
-    font-size: 22px;
-  }
+    h2 {
+        font-size: 22px;
+    }
 
-  button,
-  span {
-    font-size: 14px;
-  }
+    button,
+    span {
+        font-size: 14px;
+    }
 
-  span:hover {
-    font-size: 16px;
-    font-weight: 600;
-  }
+    span:hover,
+    span:active {
+        font-size: 16px;
+        font-weight: 600;
+    }
 }
 
 /* --- --- CAROUSEL --- --- */
@@ -218,114 +215,116 @@ span:hover {
 /* --- Frames --- */
 
 .inner-carousel {
-  width: 100%;
-  overflow: hidden;
+    width: 100%;
+    overflow: hidden;
 }
 
 .track {
-  display: inline-flex;
-  transition: transform 0.2s ease-in-out;
+    display: inline-flex;
+    transition: transform 0.2s ease-in-out;
 }
 
 /* --- Buttons --- */
 
 .nav button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  outline: none;
-  opacity: 0.6;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    outline: none;
+    opacity: 0.6;
 }
 
 .nav .next {
-  background-image: url('../Data/Images/nav-next.svg');
-  background-size: cover;
-  right: 0;
+    background-image: url('../Data/Images/nav-next.svg');
+    background-size: cover;
+    right: 0;
 }
 
 .nav .prev {
-  background-image: url('../Data/Images/nav-prev.svg');
-  background-size: cover;
-  left: 0;
-  display: none;
+    background-image: url('../Data/Images/nav-prev.svg');
+    background-size: cover;
+    left: 0;
+    display: none;
 }
 
 .nav .prev.show {
-  display: block;
+    display: block;
 }
 
 .nav .next.hide {
-  display: none;
+    display: none;
 }
 
 .nav .next:hover,
-.nav .prev:hover {
-  opacity: 0.8;
+.nav .prev:hover,
+.nav .next:active,
+.nav .prev:active {
+    opacity: 0.8;
 }
 
 .nav .next:active,
 .nav .prev:active {
-  opacity: 1;
+    opacity: 1;
 }
 
 @media (min-width: 769px) and (max-width: 1300px) {
-  .nav button {
-    width: 60px;
-    height: 60px;
-  }
+    .nav button {
+        width: 60px;
+        height: 60px;
+    }
 
-  .nav .next:active,
-  .nav .prev:active {
-    width: 70px;
-    height: 70px;
-  }
+    .nav .next:active,
+    .nav .prev:active {
+        width: 70px;
+        height: 70px;
+    }
 }
 
 @media (max-width: 768px) {
-  .nav button {
-    width: 40px;
-    height: 40px;
-  }
+    .nav button {
+        width: 40px;
+        height: 40px;
+    }
 
-  .nav .next:active,
-  .nav .prev:active {
-    width: 50px;
-    height: 50px;
-  }
+    .nav .next:active,
+    .nav .prev:active {
+        width: 50px;
+        height: 50px;
+    }
 }
 
 /* --- --- FORM --- --- */
 
 form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 form * {
-  font-size: 18px;
-  font-weight: 500;
-  margin: 0.5em 0;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0.5em 0;
 }
 
 form #name,
 form #email {
-  background-color: rgb(255, 255, 255);
-  color: rgba(0, 0, 0, 0.75);
-  border-radius: 100px;
-  border-style: solid;
-  border-color: rgb(0, 0, 0);
-  border-width: 1px;
-  width: 100%;
-  max-width: 500px;
-  height: 50px;
-  text-align: left;
-  padding: 0 2em;
+    background-color: rgb(255, 255, 255);
+    color: rgba(0, 0, 0, 0.75);
+    border-radius: 100px;
+    border-style: solid;
+    border-color: rgb(0, 0, 0);
+    border-width: 1px;
+    width: 100%;
+    max-width: 500px;
+    height: 50px;
+    text-align: left;
+    padding: 0 2em;
 }
 
 form .button {
-  width: 320px;
-  height: 46px;
-  margin: 1.5em 0 0 0;
+    width: 320px;
+    height: 46px;
+    margin: 1.5em 0 0 0;
 }

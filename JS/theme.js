@@ -43,7 +43,7 @@ function settingDayTheme() {
 
 // Postavljanje teme na osnovu dobijenog argumenta (SETTER)
 function settingTheme(Time, Hovered = null) {
-    console.log('radi')
+
     // Uzimanje boja iz objekta ThemeColors preko trenutne teme iz LocalStorage
     let currentTheme = localStorage.getItem('theme')
     let PresetColors = ThemeColors[currentTheme]
@@ -55,13 +55,13 @@ function settingTheme(Time, Hovered = null) {
     BODY.style.color = PresetColors.text
     DROPARROW.src = PresetColors.dropdownArrow
     BUTTONS.forEach(link => {
-        link.style.backgroundColor = PresetColors.secondary
+        link.style.backgroundColor = PresetColors.primaryElement
         link.style.color = PresetColors.text
     })
 
-    styleToDropdown(dropdownMenus, PresetColors.primary, PresetColors.secondary)
+    styleToDropdown(dropdownMenus, PresetColors.primary, PresetColors.primaryElement)
     window.addEventListener('resize', () => {
-        styleToDropdown(dropdownMenus, PresetColors.primary, PresetColors.secondary)
+        styleToDropdown(dropdownMenus, PresetColors.primary, PresetColors.primaryElement)
     })
 
     // Promena LOGO-a na osnovu trenutnog vremena i hover stanja

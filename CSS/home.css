@@ -1,0 +1,28 @@
+.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin-top: 100px;
+    background-color: rgb(20, 120, 200);
+}
+
+@media (min-width: 1080.1px) and (max-width: 1440px) {
+    .home {
+        margin-top: 80px;
+    }
+}
+
+@media (min-width: 720.1px) and (max-width: 1080px) {
+    .home {
+        margin-top: 80px;
+    }
+}
+
+/* --- MOBILE Devices --- */
+@media (max-width: 720px) {
+    .home {
+        margin-top: 60px;
+    }
+}

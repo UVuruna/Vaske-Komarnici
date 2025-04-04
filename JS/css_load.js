@@ -10,5 +10,4 @@ function loadStyle (url) {
 
 loadStyle('../CSS/root.css')
 loadStyle('../CSS/header.css')
-
-loadStyle('../CSS/contact_us.css')
+loadStyle('../CSS/home.css')

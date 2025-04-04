@@ -19,23 +19,26 @@ localStorage.setItem('Time', Time)
 export const ThemeColors = {
     morning: {
         text: 'rgb(35, 35, 35)',
-        primary: 'rgb(90, 170, 255)',
-        secondary: 'rgb(0, 160, 0)',
-        tertiary: 'rgb(130, 255, 130)',
+        primary: 'rgb(100, 180, 250)',
+        primaryElement: 'rgb(0, 160, 0)',
+        secondary: 'rgb(20, 80, 180)',
+        secondaryElement: 'rgb(20, 200, 120)',
         dropdownArrow: 'Images/Other/dropdown-arrow-black.svg'
     },
     afternoon: {
         text: 'rgb(35, 35, 35)',
-        primary: 'rgb(255, 190, 130)',
-        secondary: 'rgb(200, 0, 0)',
-        tertiary: 'rgb(255, 255, 120)',
+        primary: 'rgb(250, 180, 100)',
+        primaryElement: 'rgb(200, 0, 0)',
+        secondary: 'rgb(255, 255, 120)',
+        secondaryElement: 'rgb(20, 200, 120)',
         dropdownArrow: 'Images/Other/dropdown-arrow-black.svg'
     },
     night: {
         text: 'rgb(255, 255, 255)',
         primary: 'rgb(35, 35, 35)',
-        secondary: 'rgb(100, 0, 200)',
-        tertiary: 'rgb(29, 0, 60)',
+        primaryElement: 'rgb(100, 0, 200)',
+        secondary: 'rgb(100, 100, 100)',
+        secondaryElement: 'rgb(180, 140, 250)',
         dropdownArrow: 'Images/Other/dropdown-arrow-white.svg'
     }
 }

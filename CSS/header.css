@@ -2,36 +2,41 @@
 
 /* Main (Parent) Frame */
 
-.header {
+#header {
+  background-color: inherit;
+}
+
+#header {
+  background-color: inherit;
+  position: fixed;
+  top: 0;
   width: 100%;
-  padding: 10px;
+  height: 100px;
+  padding: 5px;
   display: flex;
   flex-direction: row;
   white-space: nowrap;
+  padding: 5px 5vw;
 }
 
 /* Logo */
+#logo {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+}
 
 .logo-frame {
-  width: 120px;
-  height: auto;
-  padding: 10px;
-  margin-left: 5vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: all 0.3s ease-in-out;
+  height: 100%;
+  padding: 5px;
+  transition: all 0.2s ease-in-out;
 }
 
-.logo-frame:hover {
+.logo-frame:hover,
+.logo-frame:active {
   padding: 0;
-  transition: all 0.6s ease-in-out;
+  transition: all 0.4s ease-in-out;
   opacity: 0.6;
-}
-
-.logo-frame #logo {
-  z-index: 10;
-  width: 100%;
 }
 
 /* Pages Span Section */
@@ -41,7 +46,6 @@
 
 .pages_frame {
   width: 100%;
-  padding-right: 5vw;
   display: flex;
   flex-direction: row;
   gap: 60px;
@@ -55,7 +59,7 @@
   width: 60px;
 }
 
-.pages_frame > .dropdownMenu {
+.pages_frame>.dropdownMenu {
   gap: inherit;
   display: inherit;
   flex-direction: inherit;
@@ -63,17 +67,17 @@
   justify-content: inherit;
 }
 
-.pages_frame > .dropdownMenu > img {
+.pages_frame>.dropdownMenu>img {
   width: 100%;
   height: 100%;
 }
 
-.header span {
+#header span {
   cursor: pointer;
 }
 
 .pages_frame span {
-  transition: all 0.3s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 /* Dropdown */
@@ -82,7 +86,7 @@
   height: 0.6em;
 }
 
-.dropdownTrigger > .dropdownMenu {
+.dropdownTrigger>.dropdownMenu {
   display: none;
   position: absolute;
   width: 240px;
@@ -91,60 +95,53 @@
   box-shadow: 0.75em 0.5em 5px rgba(80, 80, 80, 0.8);
 }
 
-.dropdownTrigger > .dropdownMenu a {
+.dropdownTrigger>.dropdownMenu a {
   padding: 0.5em 1em;
   display: block;
   border-radius: 1em;
 }
 
-.dropdownTrigger:hover > .dropdownMenu {
+.dropdownTrigger:hover>.dropdownMenu,
+.dropdownTrigger:active>.dropdownMenu {
   display: block;
 }
 
 /* --- TABLET Devices --- */
-@media (min-width: 1080px) and (max-width: 1440px) {
-  .logo-frame {
-    width: 100px;
-    margin: 0;
+@media (min-width: 1080.1px) and (max-width: 1440px) {
+  #header {
+    height: 80px;
   }
 
   .pages_frame {
-    padding: 0;
     gap: 35px;
   }
 
-  .dropdownTrigger > .dropdownMenu {
+  .dropdownTrigger>.dropdownMenu {
     width: 200px;
   }
 }
 
-@media (min-width: 720px) and (max-width: 1080px) {
-  .logo-frame {
-    width: 80px;
-    margin: 0;
+@media (min-width: 720.1px) and (max-width: 1080px) {
+  #header {
+    height: 80px;
+    padding: 5px 2vw;
   }
 
   .pages_frame {
-    padding: 0;
     gap: 25px;
   }
 
-  .dropdownTrigger > .dropdownMenu {
+  .dropdownTrigger>.dropdownMenu {
     width: 160px;
   }
 }
 
 /* --- MOBILE Devices --- */
 @media (max-width: 720px) {
-  .header {
+  #header {
+    height: 60px;
     flex-direction: row-reverse;
-    padding: 5px;
-  }
-
-  .logo-frame {
-    margin: 0;
-    width: 20%;
-    padding: 2%;
+    padding: 5px 2vw;
   }
 
   /* -- DROPDOWN Primary -- */
@@ -152,14 +149,16 @@
   #menu-icon {
     cursor: pointer;
     display: flex;
-    width: 20%;
-    padding: 0 2%;
-    transition: all 0.3s ease-in-out;
+    height: 90%;
+    width: auto;
+    padding: 5px;
+    transition: all 0.2s ease-in-out;
   }
 
-  #menu-icon:hover {
+  #menu-icon:hover,
+  #menu-icon:active {
     padding: 0;
-    transition: all 0.6s ease-in-out;
+    transition: all 0.4s ease-in-out;
     opacity: 0.6;
   }
 
@@ -169,17 +168,17 @@
     justify-content: left;
   }
 
-  .pages_frame > .dropdownMenu {
+  .pages_frame>.dropdownMenu {
     display: none;
     position: absolute;
-    top: 84px;
+    top: 60px;
     box-shadow: 0.75em 0.5em 5px rgba(80, 80, 80, 0.8);
     z-index: 5;
     border-radius: 2em;
     flex-grow: 1;
   }
 
-  .pages_frame > .dropdownMenu > * {
+  .pages_frame>.dropdownMenu>* {
     padding: 1em 2em;
     border-radius: 1em;
     justify-content: center;
@@ -190,14 +189,14 @@
     display: block;
   }
 
-  .pages_frame > .dropdownMenu > a {
+  .pages_frame>.dropdownMenu>a {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
-  .pages_frame > .dropdownMenu.show {
+  .pages_frame>.dropdownMenu.show {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -206,7 +205,7 @@
 
   /* -- DROPDOWN Secondary -- */
 
-  .dropdownTrigger > .dropdownMenu {
+  .dropdownTrigger>.dropdownMenu {
     width: 130px;
   }
 
