@@ -1,12 +1,5 @@
-// LOADING DIV element
-function loadHTML (elementId, filePath) {
-  fetch(filePath)
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById(elementId).innerHTML = data
-    })
-    .catch(error => console.error(`Error loading ${filePath}:`, error))
+export async function loadHTML(id, url) {
+    const response = await fetch(url)
+    const html = await response.text()
+    document.getElementById(id).innerHTML = html
 }
-
-loadHTML('header', '../HTML/header.html')
-loadHTML('home', '../HTML/home.html')

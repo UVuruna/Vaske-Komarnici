@@ -15,3 +15,79 @@ Montažu komarnika izvodi naš stručni tim majstora bez mnogo buke, prašine i 
 Fiksni - 25 eura
 Rolo - od 35 do 37 eura
 Plise - od 40 eura
+
+
+------------------GPT
+
+Ako ti je važno da se tekst dobro rangira na Google-u, ubaci ključne fraze poput:
+
+komarnici po meri Beograd / Novi Sad (ili grad u kojem radiš)
+
+montaža komarnika
+
+kupovina komarnika
+
+
+------------------GPT
+
+Šta je optimizovano:
+SEO elementi:
+
+Meta opis i meta tagovi za ključne reči dodati za bolju vidljivost na pretraživačima.
+
+Title tag sa relevantnim ključnim rečima kao što su "Izrada i montaža komarnika po meri".
+
+Opis proizvoda je bogat ključnim rečima i koristi semantičke HTML tagove poput <strong> za važne informacije.
+
+Struktura sekcija:
+
+Vrste komarnika i prednosti su razdvojene u jasne sekcije sa podnaslovima za bolju čitljivost.
+
+CTA dugme u sekciji "Kontaktirajte nas" poziva korisnike na akciju – što povećava šanse za konverziju.
+
+Kontakt sekcija:
+
+Dodao sam kontakt informacije (telefon, email, adresa) sa jasno istaknutim informacijama, što je dobro za korisnike i SEO.
+
+Omogućava lakši kontakt sa potencijalnim klijentima.
+
+Prijateljski dizajn za mobilne uređaje:
+
+Korišćenje <meta name="viewport"> za responsivnost stranice.
+
+CTA dugme je jasno uočljivo i poziva korisnike na akciju.
+
+🎯 Šta da uradiš sledeće:
+Poveži "kontakt.html" stranicu sa stvarnim kontakt formama ili dinamičkim sistemima za prikupljanje podataka.
+
+Dodaj CSS stilove za bolji izgled, prilagođene za tvoju brend boju i tipografiju.
+
+Ako trebaš stilizaciju (CSS), ili dodatne optimizacije, samo reci! 😎
+
+
+-------------->>> OLD HOME <<<------------------
+Izrada i montaža komarnika po meri
+
+Vrste Komarnika
+
+Naša firma se bavi izradom i montažom komarnika po meri. U ponudi imamo različite vrste komarnika, uključujući:
+
+Rolo
+
+Fiksni
+
+Plise (harmonika)
+
+Materijali koje koristimo
+
+Svi naši proizvodi su izrađeni od visokokvalitetnih materijala i prilagođeni su potrebama naših klijenata. Koristimo aluminijumske profile koji obezbeđuju dug vek trajanja. Mrežice za komarnike izrađene su od fiberglass-a (staklenih vlakana) i presvučene teflonom, što ih čini otpornima na vremenske uslove i dugotrajno postojanima.
+
+Naši komarnici su dostupni u različitim bojama i dimenzijama, a takođe nudimo i mogućnost izrade po meri. Naš tim stručnjaka će vam pomoći da odaberete najbolju opciju za vaše potrebe i prostor.
+
+Naša usluga
+
+Naša usluga uključuje besplatno merenje i savetovanje, kao i brzu i profesionalnu montažu. Naši komarnici su jednostavni za korišćenje i održavanje, a takođe su i estetski privlačni, čime će poboljšati izgled vašeg doma ili poslovnog prostora.
+
+Proces montaže
+
+Naš stručni tim će na poziv doći do vas u periodu ne dužem od 48 sati, pomoći vam pri odabiru komarnika i uzeti tačne mere. Montažu komarnika izvodi naš stručni tim majstora bez mnogo buke, prašine i obično u roku od sat-dva.

@@ -1,28 +1,45 @@
-.home {
+#about_us {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
     margin-top: 100px;
+    padding: 0 20vw;
     background-color: rgb(20, 120, 200);
+    color: rgb(0, 0, 0);
+}
+
+h1 {
+    text-align: center;
+}
+h2 {
+    text-align: center;
+}
+ul {
+    padding: 0 5vw;
+}
+
+#about_us p {
+    text-align: justify;
 }
 
 @media (min-width: 1080.1px) and (max-width: 1440px) {
-    .home {
+    #about_us {
         margin-top: 80px;
     }
 }
 
 @media (min-width: 720.1px) and (max-width: 1080px) {
-    .home {
+    #about_us {
+        padding: 0 10vw;
         margin-top: 80px;
     }
 }
 
 /* --- MOBILE Devices --- */
 @media (max-width: 720px) {
-    .home {
+    #about_us {
+        padding: 0 5vw;
         margin-top: 60px;
     }
 }

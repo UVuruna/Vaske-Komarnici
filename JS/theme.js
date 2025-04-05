@@ -1,49 +1,43 @@
-import {
-    BODY,
-    LOGO,
-    DROPARROW,
-    MENU,
-    ThemeList,
-    ThemeColors,
-    BUTTONS
-} from './globals.js'
+import { loadGlobals, ThemeList, ThemeColors } from './globals.js'
+export let LOGO
+let HOME, MENU, DROPARROW, BUTTONS
 
 // Logo dugme koje menja temu (SWAP PRESETS)
-function themeSwapper() {
+export function themeCycle() {
     const THEME = localStorage.getItem('theme')
     let currentIndex = ThemeList.indexOf(THEME)
-
-    // Iteracija kroz listu tema
-    // Ako je trenutna tema poslednja u listi, postavi na prvu temu
     let newIndex = (currentIndex + 1) % ThemeList.length
-    let newTheme = ThemeList[newIndex]
-    localStorage.setItem('theme', newTheme)
+    localStorage.setItem('theme', ThemeList[newIndex])
 
-    let Time = parseFloat(localStorage.getItem('Time'))
-    let newTime = (Time + 8) % 24
-
-    localStorage.setItem('Time', newTime)
-    settingTheme(newTime, true)
+    settingTheme(true)
 }
-window.themeSwapper = themeSwapper // Izlaganje funkcije za globalnu upotrebu
+window.themeCycle = themeCycle // Izlaganje funkcije za globalnu upotrebu
 
 // Promena teme na osnovu trenutnog vremena
-function settingDayTheme() {
+export function settingThemeOnload(globals) {
+    LOGO = globals.LOGO;
+    HOME = globals.HOME;
+    MENU = globals.MENU;
+    DROPARROW = globals.DROPARROW;
+    BUTTONS = globals.BUTTONS;
+
     const Time = localStorage.getItem('Time')
 
-    if (Time >= 4 && Time < 12) {
+    if (Time >= 4 && Time < 9) {
         localStorage.setItem('theme', 'morning')
-    } else if (Time >= 12 && Time < 20) {
+    } else if (Time >= 9 && Time < 16) {
+        localStorage.setItem('theme', 'noon')
+    } else if (Time >= 16 && Time < 21) {
         localStorage.setItem('theme', 'afternoon')
     } else {
         localStorage.setItem('theme', 'night')
     }
-    settingTheme(Time)
+    
+    settingTheme()
 }
 
 // Postavljanje teme na osnovu dobijenog argumenta (SETTER)
-function settingTheme(Time, Hovered = null) {
-
+export function settingTheme(Hovered = null) {
     // Uzimanje boja iz objekta ThemeColors preko trenutne teme iz LocalStorage
     let currentTheme = localStorage.getItem('theme')
     let PresetColors = ThemeColors[currentTheme]
@@ -51,25 +45,35 @@ function settingTheme(Time, Hovered = null) {
     const dropdownMenus = document.querySelectorAll('.dropdownMenu')
 
     // Postavljanje boja na osnovu trenutne teme (SETTER)
-    BODY.style.backgroundColor = PresetColors.primary
-    BODY.style.color = PresetColors.text
+    document.body.style.backgroundColor = PresetColors.primary
+    document.body.style.color = PresetColors.text
+    HOME.style.backgroundColor = PresetColors.secondary
     DROPARROW.src = PresetColors.dropdownArrow
     BUTTONS.forEach(link => {
         link.style.backgroundColor = PresetColors.primaryElement
         link.style.color = PresetColors.text
     })
 
-    styleToDropdown(dropdownMenus, PresetColors.primary, PresetColors.primaryElement)
+    configDropdown(
+        dropdownMenus,
+        PresetColors.primary,
+        PresetColors.primaryElement
+    )
     window.addEventListener('resize', () => {
-        styleToDropdown(dropdownMenus, PresetColors.primary, PresetColors.primaryElement)
+        configDropdown(
+            dropdownMenus,
+            PresetColors.primary,
+            PresetColors.primaryElement
+        )
     })
 
     // Promena LOGO-a na osnovu trenutnog vremena i hover stanja
+    const Time = localStorage.getItem('Time')
     if (
-        (Time >= 23 && Time < 24) || // 23:00 - 24:00
-        (Time >= 0 && Time < 1) || //  0:00 -  1:00
-        (Time >= 7 && Time < 9) || //  7:00 -  9:00
-        (Time >= 15 && Time < 17) // 15:00 - 17:00
+        (Time >= 6 && Time < 7) ||
+        (Time >= 12 && Time < 13) ||
+        (Time >= 18 && Time < 19) ||
+        Time < 1
     ) {
         if (!Hovered) {
             logoType = 'fire'
@@ -90,11 +94,11 @@ function settingTheme(Time, Hovered = null) {
 }
 
 // Postavlja bordere na padajuce menije
-function styleToDropdown(dropdownMenus, primaryColor, secondaryColor) {
+export function configDropdown(dropdownMenus, primaryColor, secondaryColor) {
     dropdownMenus.forEach(menu => {
         if (
             !menu.classList.contains('false') ||
-            window.matchMedia('(max-width: 720px)').matches
+            window.matchMedia('(max-width: 680px)').matches
         ) {
             menu.style.border = `3px solid ${secondaryColor}`
             menu.style.backgroundColor = primaryColor
@@ -116,15 +120,11 @@ function styleToDropdown(dropdownMenus, primaryColor, secondaryColor) {
 }
 
 // Postavlja color na elemente padajuceg menija
-function dropdownEleHoverColor(element, color) {
+export function dropdownEleHoverColor(element, color) {
     element.addEventListener('mouseover', () => {
         element.style.backgroundColor = color
     })
     element.addEventListener('mouseout', () => {
         element.style.backgroundColor = '' // Vraćanje originalne pozadine
     })
-}
-
-window.onload = function () {
-    settingDayTheme()
 }
