@@ -51,6 +51,21 @@ export function settingTheme(Hovered = null) {
     BUTTONS.forEach(link => {
         link.style.backgroundColor = PresetColors.primaryElement
         link.style.color = PresetColors.text
+        if (link.classList.contains('cta-button')) {
+
+            link.addEventListener('mouseover', () => {
+                link.style.boxShadow = `0 0 25px ${PresetColors.secondaryElement}, 0 0 50px ${PresetColors.secondaryElement}`;
+                link.style.opacity = '1'
+                link.style.backgroundColor = PresetColors.secondaryElement
+                link.style.color = 'white'
+            });
+            link.addEventListener('mouseout', () => {
+                link.style.boxShadow = '';
+                link.style.backgroundColor = PresetColors.primaryElement
+                link.style.color = PresetColors.text
+            });
+        }
+
     })
 
     configDropdown(

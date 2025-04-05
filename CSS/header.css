@@ -35,7 +35,6 @@
 /* Pages Span Section */
 
 nav > ul {
-  list-style-type: none;
   display: flex;
 }
 
@@ -181,6 +180,5 @@ nav > ul {
 
   .pages_frame button {
     margin: auto;
-    padding: 0.75em 1.5em;
   }
 }

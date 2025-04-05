@@ -7,13 +7,6 @@
 
 @font-face {
     font-family: 'Poppins';
-    src: url(../Fonts/Poppins-Medium.ttf) format('truetype');
-    font-weight: 500;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Poppins';
     src: url(../Fonts/Poppins-SemiBold.ttf) format('truetype');
     font-weight: 600;
     font-style: normal;
@@ -39,22 +32,25 @@ body {
 
 button {
     font-family: 'Poppins';
-    padding: 0.5em 1.5em;
+    padding: 0.75em 1.5em;
     text-align: center;
     border-radius: 1em;
     cursor: pointer;
 }
 
+button {
+    transition: all 0.2s ease-in-out;
+}
 button:hover,
 button:active {
-    transition: all 0.4s ease-in-out;
     opacity: 0.6;
+    transition: all 0.4s ease-in-out;
 }
 
-span:hover,
-span:active,
-li:hover,
-li:active {
+button:hover,
+button:active,
+nav li:hover,
+nav li:active {
     font-size: 1.3rem;
     font-weight: 700;
 }
@@ -81,13 +77,14 @@ p {
 
 h1,
 h2,
-h3 {
+h3,
+button,
+li {
     font-weight: 600;
 }
 
-span,
-li {
-    font-weight: 500;
+ul {
+    list-style-type: none;
 }
 
 a {
@@ -99,11 +96,11 @@ a {
         font-size: 16px;
     }
 
-    span:hover,
-    span:active,
-    li:hover,
-    li:active  {
-        font-weight: 600;
+    button:hover,
+    button:active,
+    nav li:hover,
+    nav li:active  {
+        font-weight: 700;
     }
 }
 
@@ -112,11 +109,11 @@ a {
         font-size: 14px;
     }
 
-    span:hover,
-    span:active,
-    li:hover,
-    li:active {
-        font-weight: 600;
+    button:hover,
+    button:active,
+    nav li:hover,
+    nav li:active {
+        font-weight: 700;
     }
 }
 
@@ -125,21 +122,12 @@ a {
         font-size: 12px;
     }
 
-    span:hover,
-    span:active,
-    li:hover,
-    li:active  {
-        font-weight: 600;
+    button:hover,
+    button:active,
+    nav li:hover,
+    nav li:active  {
+        font-weight: 700;
     }
-}
-
-img,
-span,
-li,
-button,
-input,
-select {
-    -webkit-tap-highlight-color: transparent;
 }
 
 * {
@@ -148,4 +136,5 @@ select {
     text-decoration: none;
     background: none;
     -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: transparent;
 }

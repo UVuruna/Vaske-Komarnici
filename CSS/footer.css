@@ -1,15 +1,16 @@
-.cta-button {
-    display: inline-block;
-    padding: 12px 24px;
-    background-color: #0ff;
-    color: #000;
-    font-weight: bold;
-    border-radius: 10px;
-    text-decoration: none;
-    box-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
-    transition: all 0.3s ease;
-  }
-  .cta-button:hover {
-    box-shadow: 0 0 15px #0ff, 0 0 30px #0ff;
-    transform: scale(1.03);
-  }
+#footer {
+  color: #fff;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+footer {
+  margin: 50px 2% 0 2%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
