@@ -4,9 +4,16 @@
     align-items: center;
     justify-content: center;
     margin-top: 100px;
-    padding: 0 20vw;
+    padding: 0 13vw;
     background-color: rgb(20, 120, 200);
     color: rgb(0, 0, 0);
+    border-radius: 3rem;
+}
+
+#about_us ul {
+    list-style-type: disc;
+    list-style-position: inside;
+    padding: 0 5vw;
 }
 
 h1 {
@@ -15,11 +22,11 @@ h1 {
 h2 {
     text-align: center;
 }
-ul {
-    padding: 0 5vw;
-}
 
-#about_us p {
+header p {
+    text-align: center;
+}
+section p {
     text-align: justify;
 }
 
@@ -29,7 +36,7 @@ ul {
     }
 }
 
-@media (min-width: 720.1px) and (max-width: 1080px) {
+@media (min-width: 680.1px) and (max-width: 1080px) {
     #about_us {
         padding: 0 10vw;
         margin-top: 80px;
@@ -37,7 +44,7 @@ ul {
 }
 
 /* --- MOBILE Devices --- */
-@media (max-width: 720px) {
+@media (max-width: 680px) {
     #about_us {
         padding: 0 5vw;
         margin-top: 60px;

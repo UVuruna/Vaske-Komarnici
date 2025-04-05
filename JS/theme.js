@@ -42,7 +42,7 @@ export function settingTheme(Hovered = null) {
     let currentTheme = localStorage.getItem('theme')
     let PresetColors = ThemeColors[currentTheme]
     let logoType
-    const dropdownMenus = document.querySelectorAll('.dropdownMenu')
+    const dropdownMenus = document.querySelectorAll('#header ul')
 
     document.body.style.backgroundColor = PresetColors.primary
     document.body.style.color = PresetColors.text
@@ -94,8 +94,8 @@ export function settingTheme(Hovered = null) {
 export function configDropdown(dropdownMenus, primaryColor, secondaryColor) {
     dropdownMenus.forEach(menu => {
         if (
-            !menu.classList.contains('false') ||
-            window.matchMedia('(max-width: 680px)').matches
+            !menu.classList.contains('menu') ||
+            window.matchMedia('(max-width: 750px)').matches
         ) {
             menu.style.border = `3px solid ${secondaryColor}`
             menu.style.backgroundColor = primaryColor

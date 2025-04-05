@@ -1,15 +1,8 @@
-/* --- PC Devices --- */
-
-/* Main (Parent) Frame */
-
 #header {
-  background-color: inherit;
   z-index: 1000;
-}
-
-#header {
   background-color: inherit;
   position: fixed;
+  left: 0;
   top: 0;
   width: 100%;
   height: 100px;
@@ -40,6 +33,17 @@
 }
 
 /* Pages Span Section */
+
+nav > ul {
+  list-style-type: none;
+  display: flex;
+}
+
+.dropdownTrigger ul {
+  display: none;
+  flex-direction: column;
+}
+
 #menu-icon {
   display: none;
 }
@@ -48,103 +52,77 @@
   width: 100%;
   display: flex;
   flex-direction: row;
-  gap: 60px;
+  gap: 3rem;
   align-items: center;
   justify-content: flex-end;
   z-index: 2;
   flex-grow: 1;
 }
 
+.menu {
+  gap: 2rem;
+  padding: 0;
+  margin: 0;
+}
+
 #menu-icon {
   width: 60px;
 }
 
-.dropdownMenu {
-  z-index: 5;
-}
-.pages_frame>.dropdownMenu {
-  gap: inherit;
-  display: inherit;
-  flex-direction: inherit;
-  align-items: inherit;
-  justify-content: inherit;
-}
-
-.pages_frame>.dropdownMenu>img {
-  width: 100%;
-  height: 100%;
-}
-
-#header span {
+.dropdownTrigger {
   cursor: pointer;
 }
 
-.pages_frame span {
+.pages_frame li {
   transition: all 0.2s ease-in-out;
 }
 
 /* Dropdown */
 
-.dropdownTrigger #dropdown-arrow {
-  height: 0.6em;
+#dropdown-arrow {
+  height: 0.5rem;
 }
 
-.dropdownTrigger>.dropdownMenu {
+.dropdownTrigger ul {
   display: none;
   position: absolute;
-  width: 240px;
+  top: 3.5rem;
+  width: 10rem;
   white-space: nowrap;
   border-radius: 1.3em;
+  padding: 0;
   box-shadow: 0.75em 0.5em 5px rgba(80, 80, 80, 0.8);
+  text-align: center;
 }
 
-.dropdownTrigger>.dropdownMenu a {
+.dropdownTrigger li {
   padding: 0.5em 1em;
   display: block;
   border-radius: 1em;
 }
 
-.dropdownTrigger:hover>.dropdownMenu,
-.dropdownTrigger:active>.dropdownMenu {
+.dropdownTrigger:hover > ul,
+.dropdownTrigger:active > ul {
   display: block;
 }
 
 /* --- TABLET Devices --- */
-@media (min-width: 1080.1px) and (max-width: 1440px) {
+@media (min-width: 750.1px) and (max-width: 1440px) {
   #header {
     height: 80px;
-  }
-
-  .pages_frame {
-    gap: 35px;
-  }
-
-  .dropdownTrigger>.dropdownMenu {
-    width: 200px;
   }
 }
 
-@media (min-width: 680.1px) and (max-width: 1080px) {
+@media (max-width: 1080px) {
   #header {
-    height: 80px;
     padding: 0 2vw;
   }
-
-  .pages_frame {
-    gap: 25px;
-  }
-
-  .dropdownTrigger>.dropdownMenu {
-    width: 160px;
-  }
 }
 
-/* --- MOBILE Devices --- */
-@media (max-width: 680px) {
+@media (max-width: 750px) {
   #header {
     height: 60px;
     flex-direction: row-reverse;
-    padding: 0 2vw;
   }
 
   /* -- DROPDOWN Primary -- */
@@ -171,44 +149,32 @@
     justify-content: left;
   }
 
-  .pages_frame>.dropdownMenu {
+  .menu {
     display: none;
     position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     top: 60px;
     box-shadow: 0.75em 0.5em 5px rgba(80, 80, 80, 0.8);
     border-radius: 2em;
-    flex-grow: 1;
+    gap: 0;
+    display: none;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    min-width: 60vw;
   }
 
-  .pages_frame>.dropdownMenu>* {
+  .menu > * {
     padding: 1em 2em;
     border-radius: 1em;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .dropdownTrigger {
-    display: block;
-  }
-
-  .pages_frame>.dropdownMenu>a {
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
+    padding: 1em 2em;
   }
 
-  .pages_frame>.dropdownMenu.show {
+  .menu.show {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  /* -- DROPDOWN Secondary -- */
-
-  .dropdownTrigger>.dropdownMenu {
-    width: 130px;
   }
 
   /* Center Button */

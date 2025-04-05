@@ -24,7 +24,7 @@ export function mouseHoverLogo(LOGO) {
 
 export function mouseHoverDropdown() {
     const menuIcon = document.getElementById('menu-icon')
-    const pagesSpans = document.querySelector('.dropdownMenu')
+    const pagesSpans = document.querySelector('.menu')
 
     menuIcon.addEventListener('click', e => {
         e.stopPropagation()
@@ -34,9 +34,8 @@ export function mouseHoverDropdown() {
     document.body.addEventListener('click', () => {
         pagesSpans.classList.remove('show')
     })
-    document
-        .querySelector('.dropdownMenu')
-        .addEventListener('click', (e) => {
+
+    document.querySelector('nav').addEventListener('click', (e) => {
             e.stopPropagation()
         })
 }

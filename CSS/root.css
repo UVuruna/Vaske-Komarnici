@@ -32,9 +32,9 @@ html {
 }
 
 body {
+    
     font-size: 1rem;
     font-weight: 400;
-    margin: 0 auto;
 }
 
 button {
@@ -52,22 +52,25 @@ button:active {
 }
 
 span:hover,
-span:active {
+span:active,
+li:hover,
+li:active {
     font-size: 1.3rem;
     font-weight: 700;
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
 }
 
 h2 {
     margin: 0.5em 0;
-    font-size: 2rem;
+    font-size: 1.8rem;
 }
 
 button,
-span {
+span,
+li {
     font-size: 1rem;
 }
 
@@ -82,22 +85,13 @@ h3 {
     font-weight: 600;
 }
 
-span {
+span,
+li {
     font-weight: 500;
 }
 
 a {
     color: inherit;
-}
-
-menu,
-ol,
-ul {
-    list-style-type: disc;
-    list-style-position: inside;
-    margin: 0;
-    padding: 0;
-    gap: 0.5em;
 }
 
 @media (min-width: 1080.1px) and (max-width: 1440px) {
@@ -106,50 +100,48 @@ ul {
     }
 
     span:hover,
-    span:active {
+    span:active,
+    li:hover,
+    li:active  {
         font-weight: 600;
     }
 }
 
-@media (min-width: 680.1px) and (max-width: 1080px) {
+@media (min-width: 750.1px) and (max-width: 1080px) {
     html {
         font-size: 14px;
     }
 
     span:hover,
-    span:active {
+    span:active,
+    li:hover,
+    li:active {
         font-weight: 600;
     }
 }
 
-@media (max-width: 680px) {
+@media (max-width: 750px) {
     html {
         font-size: 12px;
     }
 
     span:hover,
-    span:active {
+    span:active,
+    li:hover,
+    li:active  {
         font-weight: 600;
     }
 }
 
 img,
 span,
+li,
 button,
 input,
 select {
     -webkit-tap-highlight-color: transparent;
 }
 
-a,
-button,
-input,
-select,
-h1,
-h2,
-h3,
-h4,
-h5,
 * {
     box-sizing: border-box;
     border: none;

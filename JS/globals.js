@@ -1,6 +1,5 @@
 
 export function loadGlobals () {
-  console.log('Loading globals')
   return {
     LOGO: document.getElementById('logo'),
     HOME: document.getElementById('about_us'),

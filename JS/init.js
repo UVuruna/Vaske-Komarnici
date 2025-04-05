@@ -10,6 +10,7 @@ import { loadGlobals } from './globals.js'
 async function init() {
     await loadHTML('header', '../HTML/header.html')
     await loadHTML('about_us', '../HTML/about_us.html')
+    await loadHTML('catalog', '../HTML/catalog.html')
     await loadHTML('footer', '../HTML/footer.html')
 
     const globals = loadGlobals()
