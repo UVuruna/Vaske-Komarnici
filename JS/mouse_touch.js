@@ -24,7 +24,7 @@ export function mouseHoverLogo(LOGO) {
 
 export function mouseHoverDropdown() {
     const menuIcon = document.getElementById('menu-icon')
-    const pagesSpans = document.querySelector('.dropdownMenu') // Ovo radi samo zato sto treba prvi dropdown menu
+    const pagesSpans = document.querySelector('.dropdownMenu')
 
     menuIcon.addEventListener('click', e => {
         e.stopPropagation()

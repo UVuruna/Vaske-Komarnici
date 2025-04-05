@@ -1,4 +1,4 @@
-// globals.js
+
 export function loadGlobals () {
   console.log('Loading globals')
   return {
@@ -33,7 +33,7 @@ export const ThemeColors = {
   noon: {
     text: 'rgb(255, 255, 255)',
     primary: 'rgb(75, 75, 75)',
-    primaryElement: 'rgb(166, 124, 0)',
+    primaryElement: 'rgb(145, 115, 0)',
     secondary: 'rgb(200, 200, 180)',
     secondaryElement: 'rgb(255, 179, 0)',
     dropdownArrow: 'Images/Other/dropdown-arrow-white.svg'
@@ -41,9 +41,9 @@ export const ThemeColors = {
   afternoon: {
     text: 'rgb(0, 0, 0)',
     primary: 'rgb(250, 180, 100)',
-    primaryElement: 'rgb(220, 40, 40)',
+    primaryElement: 'rgb(230, 40, 40)',
     secondary: 'rgb(220, 135, 60)',
-    secondaryElement: 'rgb(240, 60, 60)',
+    secondaryElement: 'rgb(255, 100, 100)',
     dropdownArrow: 'Images/Other/dropdown-arrow-black.svg'
   },
   night: {

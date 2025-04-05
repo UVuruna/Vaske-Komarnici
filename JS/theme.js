@@ -2,7 +2,7 @@ import { loadGlobals, ThemeList, ThemeColors } from './globals.js'
 export let LOGO
 let HOME, MENU, DROPARROW, BUTTONS
 
-// Logo dugme koje menja temu (SWAP PRESETS)
+
 export function themeCycle() {
     const THEME = localStorage.getItem('theme')
     let currentIndex = ThemeList.indexOf(THEME)
@@ -11,9 +11,8 @@ export function themeCycle() {
 
     settingTheme(true)
 }
-window.themeCycle = themeCycle // Izlaganje funkcije za globalnu upotrebu
 
-// Promena teme na osnovu trenutnog vremena
+
 export function settingThemeOnload(globals) {
     LOGO = globals.LOGO;
     HOME = globals.HOME;
@@ -33,18 +32,18 @@ export function settingThemeOnload(globals) {
         localStorage.setItem('theme', 'night')
     }
     
+    //localStorage.setItem('theme', 'afternoon') // TESTING PURPOSES
     settingTheme()
 }
 
-// Postavljanje teme na osnovu dobijenog argumenta (SETTER)
+
 export function settingTheme(Hovered = null) {
-    // Uzimanje boja iz objekta ThemeColors preko trenutne teme iz LocalStorage
+
     let currentTheme = localStorage.getItem('theme')
     let PresetColors = ThemeColors[currentTheme]
     let logoType
     const dropdownMenus = document.querySelectorAll('.dropdownMenu')
 
-    // Postavljanje boja na osnovu trenutne teme (SETTER)
     document.body.style.backgroundColor = PresetColors.primary
     document.body.style.color = PresetColors.text
     HOME.style.backgroundColor = PresetColors.secondary
@@ -67,7 +66,6 @@ export function settingTheme(Hovered = null) {
         )
     })
 
-    // Promena LOGO-a na osnovu trenutnog vremena i hover stanja
     const Time = localStorage.getItem('Time')
     if (
         (Time >= 6 && Time < 7) ||
@@ -88,12 +86,11 @@ export function settingTheme(Hovered = null) {
         }
     }
 
-    // Postavljanje LOGO-a (SETTER)
     LOGO.src = `Images/Logo/logo_${currentTheme}_${logoType}.webp`
     MENU.src = `Images/Other/dropdown-menu-${currentTheme}.svg`
 }
 
-// Postavlja bordere na padajuce menije
+
 export function configDropdown(dropdownMenus, primaryColor, secondaryColor) {
     dropdownMenus.forEach(menu => {
         if (
@@ -119,12 +116,12 @@ export function configDropdown(dropdownMenus, primaryColor, secondaryColor) {
     })
 }
 
-// Postavlja color na elemente padajuceg menija
+
 export function dropdownEleHoverColor(element, color) {
     element.addEventListener('mouseover', () => {
         element.style.backgroundColor = color
     })
     element.addEventListener('mouseout', () => {
-        element.style.backgroundColor = '' // Vraćanje originalne pozadine
+        element.style.backgroundColor = '' 
     })
 }
