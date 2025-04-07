@@ -1,5 +1,3 @@
-
-
 export function mouseHoverLogo(LOGO) {
     LOGO.addEventListener('mouseover', () => {
         let newSrc

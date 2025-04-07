@@ -1,4 +1,4 @@
-import { loadGlobals, ThemeList, ThemeColors } from './globals.js'
+import { ThemeList, ThemeColors } from './globals.js'
 export let LOGO
 let HOME, MENU, DROPARROW, BUTTONS
 
@@ -48,6 +48,7 @@ export function settingTheme(Hovered = null) {
     document.body.style.color = PresetColors.text
     HOME.style.backgroundColor = PresetColors.secondary
     DROPARROW.src = PresetColors.dropdownArrow
+
     BUTTONS.forEach(link => {
         link.style.backgroundColor = PresetColors.primaryElement
         link.style.color = PresetColors.text
