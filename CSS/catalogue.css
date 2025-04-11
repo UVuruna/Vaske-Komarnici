@@ -1,0 +1,132 @@
+#catalogue {
+  color: rgb(255, 255, 255);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+#catalogue > div {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+}
+
+#catalogue section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+/* --- Promo Video Part --- */
+
+.video-loop {
+  width: 100%;
+  height: auto;
+  margin-top: 2rem;
+}
+
+/* --- Selecting Models Part --- */
+
+.selectFrame {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding-inline-start: 0;
+}
+
+.selectFrame > :hover {
+  transform: scale(1.1);
+}
+
+.selectFrame > * {
+  overflow: hidden;
+  padding: 0.5rem 0;
+  border-radius: 30px;
+  transition: all 0.3s ease-in-out;
+  white-space: nowrap;
+}
+
+.selectFrame > li:first-of-type {
+  padding: 0.4rem;
+}
+
+.selectFrame ul {
+  padding: 0 0.5em;
+  gap: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.selectFrame > *:not(:first-child) {
+  border: 1px solid rgb(255, 255, 255);
+}
+
+.selectFrame h3 {
+  text-align: center;
+  margin: 0 1.5rem;
+}
+
+.selectFrame img {
+  height: 2.5rem;
+  width: auto;
+  vertical-align: middle;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.fa-ban {
+    cursor: pointer;
+    font-size: 3rem;
+}
+
+.selectFrame img:hover {
+  transform: scale(1.2);
+}
+
+/* Model Image */
+
+#catalogue section > img {
+  transition: all 0.5s ease-in-out;
+  max-height: 40vh;
+  max-width: 90vw;
+}
+
+@media (max-width: 1150px) {
+  #catalogue > div {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 750px) {
+  .selectFrame {
+    gap: 0.5rem;
+  }
+
+  .selectFrame > * {
+    padding: 0.25rem 0;
+    border-radius: 15px;
+  }
+
+  .selectFrame h3 {
+    text-align: center;
+    margin: 0 0.5rem;
+  }
+}
+
+/* --- Selecting Models Part --- */

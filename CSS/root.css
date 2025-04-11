@@ -1,140 +1,152 @@
 @font-face {
-    font-family: 'Poppins';
-    src: url(../Fonts/Poppins-Regular.ttf) format('truetype');
-    font-weight: 400;
-    font-style: normal;
+  font-family: 'Poppins';
+  src: url(../Fonts/Poppins-Regular.ttf) format('truetype');
+  font-weight: 400;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Poppins';
-    src: url(../Fonts/Poppins-SemiBold.ttf) format('truetype');
-    font-weight: 600;
-    font-style: normal;
+  font-family: 'Poppins';
+  src: url(../Fonts/Poppins-SemiBold.ttf) format('truetype');
+  font-weight: 500;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Poppins';
-    src: url(../Fonts/Poppins-Bold.ttf) format('truetype');
-    font-weight: 700;
-    font-style: normal;
+  font-family: 'Poppins';
+  src: url(../Fonts/Poppins-SemiBold.ttf) format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url(../Fonts/Poppins-Bold.ttf) format('truetype');
+  font-weight: 700;
+  font-style: normal;
 }
 
 html {
-    font-size: 18px;
-    font-family: 'Poppins';
+  font-size: 16px;
+  font-family: 'Poppins';
 }
 
 body {
-    
-    font-size: 1rem;
-    font-weight: 400;
+  cursor: default;
 }
 
 button {
-    font-family: 'Poppins';
-    padding: 0.75em 1.5em;
-    text-align: center;
-    border-radius: 1em;
-    cursor: pointer;
+  font-family: 'Poppins';
+  padding: 0.75em 1.5em;
+  text-align: center;
+  border-radius: 1.5em;
+  cursor: pointer;
 }
 
 button {
-    transition: all 0.2s ease-in-out;
-}
-button:hover,
-button:active {
-    opacity: 0.6;
-    transition: all 0.4s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 button:hover,
 button:active,
 nav li:hover,
 nav li:active {
-    font-size: 1.3rem;
-    font-weight: 700;
+  font-size: 1.2rem;
+  font-weight: 700;
 }
 
 h1 {
-    font-size: 2.5rem;
+  margin: 0.5em 0 0.2em 0;
+  font-size: 2rem;
 }
 
 h2 {
-    margin: 0.5em 0;
-    font-size: 1.8rem;
+  margin: 0.5em 0 0.2em 0;
+  font-size: 1.5rem;
+}
+
+ul {
+  margin: 0;
 }
 
 button,
 span,
 li {
-    font-size: 1rem;
+  font-size: 1rem;
 }
 
 p {
-    margin: 5px 0;
-    font-size: 1rem;
+  margin: 5px 0;
 }
 
 h1,
 h2,
 h3,
-button,
-li {
-    font-weight: 600;
+button {
+  font-weight: 600;
+}
+
+button {
+  border: 2px solid rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
 }
 
 ul {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 a {
-    color: inherit;
+  color: inherit;
 }
 
-@media (min-width: 1080.1px) and (max-width: 1440px) {
-    html {
-        font-size: 16px;
-    }
-
-    button:hover,
-    button:active,
-    nav li:hover,
-    nav li:active  {
-        font-weight: 700;
-    }
+.media-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@media (min-width: 750.1px) and (max-width: 1080px) {
-    html {
-        font-size: 14px;
-    }
+@media (min-width: 1080px) and (max-width: 1440px) {
+  html {
+    font-size: 13px;
+  }
+}
 
-    button:hover,
-    button:active,
-    nav li:hover,
-    nav li:active {
-        font-weight: 700;
-    }
+@media (min-width: 750px) and (max-width: 1080px) {
+  html {
+    font-size: 12px;
+  }
 }
 
 @media (max-width: 750px) {
-    html {
-        font-size: 12px;
-    }
-
-    button:hover,
-    button:active,
-    nav li:hover,
-    nav li:active  {
-        font-weight: 700;
-    }
+  html {
+    font-size: 11px;
+  }
 }
 
 * {
-    box-sizing: border-box;
-    border: none;
-    text-decoration: none;
-    background: none;
-    -webkit-font-smoothing: antialiased;
-    -webkit-tap-highlight-color: transparent;
+  box-sizing: border-box;
+  border: none;
+  text-decoration: none;
+  background: none;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+}
+
+@media (min-width: 750px) {
+  .hoverHighlight {
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+
+    &:hover {
+      filter: brightness(120%);
+      -webkit-filter: brightness(120%);
+      -moz-filter: brightness(120%);
+      -o-filter: brightness(120%);
+      -ms-filter: brightness(120%);
+      -webkit-transition: all 0.5s;
+      transition: all 0.5s;
+    }
+  }
 }

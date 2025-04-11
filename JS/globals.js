@@ -1,11 +1,14 @@
-export function loadGlobals() {
-	return {
-		LOGO: document.getElementById('logo'),
-		HOME: document.getElementById('about_us'),
-		MENU: document.getElementById('menu-icon'),
-		DROPARROW: document.getElementById('dropdown-arrow'),
-		BUTTONS: document.querySelectorAll('button')
-	}
+export function loadGlobals () {
+  return {
+    LOGO: document.getElementById('logo'),
+    MENU: document.getElementById('menu-icon'),
+    BUTTONS: document.querySelectorAll('button'),
+    LightFrames: document.querySelectorAll(
+      '#about_us, .selectFrame > *:not(:first-child)'
+    ),
+    ListItems: document.querySelectorAll('li strong'),
+    videos: document.querySelectorAll('.video-loop')
+  }
 }
 
 export const ThemeList = ['morning', 'noon', 'afternoon', 'night']
@@ -16,40 +19,32 @@ const Time = currentDate.getHours() + minutes / 60
 localStorage.setItem('Time', Time)
 
 if (!localStorage.getItem('theme')) {
-	localStorage.setItem('theme', ThemeList[1])
+  localStorage.setItem('theme', ThemeList[1])
 }
 
 export const ThemeColors = {
-	morning: {
-		text: 'rgb(0, 0, 0)',
-		primary: 'rgb(100, 180, 250)',
-		primaryElement: 'rgb(0, 160, 0)',
-		secondary: 'rgb(60, 135, 220)',
-		secondaryElement: 'rgb(0, 84, 0)',
-		dropdownArrow: 'Images/Other/dropdown-arrow-black.svg'
-	},
-	noon: {
-		text: 'rgb(255, 255, 255)',
-		primary: 'rgb(75, 75, 75)',
-		primaryElement: 'rgb(145, 115, 0)',
-		secondary: 'rgb(200, 200, 180)',
-		secondaryElement: 'rgb(100, 70, 0)',
-		dropdownArrow: 'Images/Other/dropdown-arrow-white.svg'
-	},
-	afternoon: {
-		text: 'rgb(0, 0, 0)',
-		primary: 'rgb(250, 180, 100)',
-		primaryElement: 'rgb(120, 0, 0)',
-		secondary: 'rgb(255, 255, 255)',
-		secondaryElement: 'rgb(120, 0, 0)',
-		dropdownArrow: 'Images/Other/dropdown-arrow-black.svg'
-	},
-	night: {
-		text: 'rgb(255, 255, 255)',
-		primary: 'rgb(35, 35, 35)',
-		primaryElement: 'rgb(100, 0, 200)',
-		secondary: 'rgb(160, 160, 160)',
-		secondaryElement: 'rgb(60, 0, 130)',
-		dropdownArrow: 'Images/Other/dropdown-arrow-white.svg'
-	}
+  morning: {
+    primary: 'rgb(35, 88, 141)',
+    secondary: 'rgb(245, 255, 255)',
+    primaryElement: 'rgb(37, 125, 37)',
+    secondaryElement: 'rgb(19, 85, 19)'
+  },
+  noon: {
+    primary: 'rgb(100, 100, 100)',
+    secondary: 'rgb(255, 254, 245)',
+    primaryElement: 'rgb(140, 105, 0)',
+    secondaryElement: 'rgb(92, 63, 2)'
+  },
+  afternoon: {
+    primary: 'rgb(104, 65, 25)',
+    secondary: 'rgb(255, 252, 248)',
+    primaryElement: 'rgb(123, 50, 50)',
+    secondaryElement: 'rgb(111, 19, 19)'
+  },
+  night: {
+    primary: 'rgb(70, 70, 70)',
+    secondary: 'rgb(252, 248, 255)',
+    primaryElement: 'rgb(102, 59, 144)',
+    secondaryElement: 'rgb(64, 28, 106)'
+  }
 }
