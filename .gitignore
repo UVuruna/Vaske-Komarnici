@@ -4,3 +4,6 @@ PHPMailer/
 vendor/
 composer.lock
 composer.json
+
+# Owner inbox - local only (root Rule #18)
+UV/
