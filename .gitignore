@@ -7,3 +7,8 @@ composer.json
 
 # Owner inbox - local only (root Rule #18)
 UV/
+
+# Python (guard tests under tests/)
+__pycache__/
+*.pyc
+.pytest_cache/
